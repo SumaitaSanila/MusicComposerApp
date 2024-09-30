@@ -1,0 +1,7 @@
+[udpreceive 8732]
+|
+[route /gesture]
+|
+[unpack f f]
+|           \
+[print X Y]  [some sound processing or control here]

@@ -14,6 +14,11 @@
 		39E5CB712CAB50F800EE9FA1 /* MusicComposerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5CB702CAB50F800EE9FA1 /* MusicComposerAppTests.swift */; };
 		39E5CB7B2CAB50F800EE9FA1 /* MusicComposerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5CB7A2CAB50F800EE9FA1 /* MusicComposerAppUITests.swift */; };
 		39E5CB7D2CAB50F800EE9FA1 /* MusicComposerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5CB7C2CAB50F800EE9FA1 /* MusicComposerAppUITestsLaunchTests.swift */; };
+		39E5CB8A2CAB55E700EE9FA1 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5CB892CAB55E700EE9FA1 /* VideoViewModel.swift */; };
+		39E5CB8C2CAB568300EE9FA1 /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5CB8B2CAB568300EE9FA1 /* VideoPicker.swift */; };
+		39E5CB8E2CAB572B00EE9FA1 /* OSCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E5CB8D2CAB572B00EE9FA1 /* OSCManager.swift */; };
+		39E5CB922CAB581C00EE9FA1 /* OSCKit in Frameworks */ = {isa = PBXBuildFile; productRef = 39E5CB912CAB581C00EE9FA1 /* OSCKit */; };
+		39E5CB942CAB582300EE9FA1 /* OSCKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 39E5CB932CAB582300EE9FA1 /* OSCKitCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,9 @@
 		39E5CB762CAB50F800EE9FA1 /* MusicComposerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicComposerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E5CB7A2CAB50F800EE9FA1 /* MusicComposerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicComposerAppUITests.swift; sourceTree = "<group>"; };
 		39E5CB7C2CAB50F800EE9FA1 /* MusicComposerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicComposerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		39E5CB892CAB55E700EE9FA1 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		39E5CB8B2CAB568300EE9FA1 /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
+		39E5CB8D2CAB572B00EE9FA1 /* OSCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSCManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E5CB942CAB582300EE9FA1 /* OSCKitCore in Frameworks */,
+				39E5CB922CAB581C00EE9FA1 /* OSCKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +88,7 @@
 				39E5CB6F2CAB50F800EE9FA1 /* MusicComposerAppTests */,
 				39E5CB792CAB50F800EE9FA1 /* MusicComposerAppUITests */,
 				39E5CB5D2CAB50F600EE9FA1 /* Products */,
+				39E5CB902CAB581C00EE9FA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				39E5CB5F2CAB50F600EE9FA1 /* MusicComposerAppApp.swift */,
+				39E5CB8B2CAB568300EE9FA1 /* VideoPicker.swift */,
+				39E5CB8D2CAB572B00EE9FA1 /* OSCManager.swift */,
 				39E5CB612CAB50F600EE9FA1 /* ContentView.swift */,
+				39E5CB892CAB55E700EE9FA1 /* VideoViewModel.swift */,
 				39E5CB632CAB50F800EE9FA1 /* Assets.xcassets */,
 				39E5CB652CAB50F800EE9FA1 /* Preview Content */,
 			);
@@ -127,6 +141,13 @@
 			path = MusicComposerAppUITests;
 			sourceTree = "<group>";
 		};
+		39E5CB902CAB581C00EE9FA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +164,10 @@
 			dependencies = (
 			);
 			name = MusicComposerApp;
+			packageProductDependencies = (
+				39E5CB912CAB581C00EE9FA1 /* OSCKit */,
+				39E5CB932CAB582300EE9FA1 /* OSCKitCore */,
+			);
 			productName = MusicComposerApp;
 			productReference = 39E5CB5C2CAB50F600EE9FA1 /* MusicComposerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 39E5CB532CAB50F600EE9FA1;
+			packageReferences = (
+				39E5CB8F2CAB57B900EE9FA1 /* XCRemoteSwiftPackageReference "OSCKit" */,
+			);
 			productRefGroup = 39E5CB5D2CAB50F600EE9FA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E5CB8E2CAB572B00EE9FA1 /* OSCManager.swift in Sources */,
 				39E5CB622CAB50F600EE9FA1 /* ContentView.swift in Sources */,
+				39E5CB8C2CAB568300EE9FA1 /* VideoPicker.swift in Sources */,
+				39E5CB8A2CAB55E700EE9FA1 /* VideoViewModel.swift in Sources */,
 				39E5CB602CAB50F600EE9FA1 /* MusicComposerAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +460,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,6 +489,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,6 +615,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		39E5CB8F2CAB57B900EE9FA1 /* XCRemoteSwiftPackageReference "OSCKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/OSCKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		39E5CB912CAB581C00EE9FA1 /* OSCKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39E5CB8F2CAB57B900EE9FA1 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKit;
+		};
+		39E5CB932CAB582300EE9FA1 /* OSCKitCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39E5CB8F2CAB57B900EE9FA1 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKitCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 39E5CB542CAB50F600EE9FA1 /* Project object */;
 }
